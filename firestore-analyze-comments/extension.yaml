@@ -43,7 +43,7 @@ billingRequired: true
 
 roles:
   - role: datastore.user
-    reason: Allows the extension to write translated strings to Cloud Firestore.
+    reason: Allows the extension to write comment analysis results to Cloud Firestore.
 
 resources:
   - name: fsAnalyzeCommentsOnCreate
@@ -122,7 +122,7 @@ params:
     immutable: true
 
   - param: PERSPECTIVE_API_KEY
-    label: Input field name
+    label: Perspective API Key
     description: >
       What is the API KEY that will be used to call the Perspective API?
     required: true
@@ -149,6 +149,6 @@ params:
     label: Abusive content output field name
     description: >
       What is the name of the field where you want to store your output?
-    example: labeled_attributes
-    default: labeled_attributes
+    example: abusive_attribute_scores
+    default: abusive_attribute_scores
     required: true
