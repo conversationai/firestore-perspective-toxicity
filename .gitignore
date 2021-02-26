@@ -11,5 +11,8 @@ typings/
 # Node.js dependency directory
 node_modules/
 
-
+# Firebase and emulator-related files
+firebase.json
+firestore-debug.log
 test-params.env
+ui-debug.log
