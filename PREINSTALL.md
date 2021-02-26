@@ -9,7 +9,7 @@ your text scores for the following attributes: TOXICITY, SEVERE_TOXICITY,
 IDENTITY_ATTACK, INSULT, PROFANITY, and THREAT. It is run when a new document is
 added to your collection or an existing document is modified.
 
-#### Additional setup
+# Additional setup
 
 Before you can use this extension, you will need to enable Perspective API.
 Follow [the instructions on our Get Started page](support.perspectiveapi.com/s/docs-get-started)
