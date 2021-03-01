@@ -165,5 +165,5 @@ params:
     options:
         - value: true
         - value: false
-    default: true
+    default: false
     required: true
