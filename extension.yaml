@@ -152,3 +152,18 @@ params:
     example: abusive_attribute_scores
     default: abusive_attribute_scores
     required: true
+
+  - param: DO_NOT_STORE
+    label: doNotStore flag value
+    description: >
+        Whether or not Perspective API is permitted to store the comment that
+        gets sent in the request (the contents of the input field). Stored
+        comments will be used to improve the API over time. NOTE\: This should be
+        set to true if data being submitted is private (i.e. not publicly
+        accessible) or contains content written by someone under 13 years old.
+    type: select
+    options:
+        - value: true
+        - value: false
+    default: true
+    required: true
