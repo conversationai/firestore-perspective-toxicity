@@ -132,7 +132,7 @@ params:
     description: >
       What is the name of the field that contains the string that you want to analyze?
     example: text
-    default: text 
+    default: text
     required: true
 
   - param: OUTPUT_FIELD_NAME
