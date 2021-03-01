@@ -19,7 +19,7 @@ key](support.perspectiveapi.com/s/docs-enable-the-api).
 By default, you're granted quota for 1 QPS to Perspective API. For additional
 QPS, fill out a [quota increase
 request](support.perspectiveapi.com/s/request-quota-increase) as needed. Note
-that if you add or update documents at a rate higher than you're allotted QPS,
+that if you add or update documents at a rate higher than your allotted QPS,
 you may exceed quota and the extension will fail to score your documents.
 
 # Billing
@@ -39,4 +39,3 @@ All Firebase services offer a free tier of usage.
 
 Perspective API is free for all amounts of quota. Any costs associated with this
 extension come from the Firebase and Google Cloud Platform services listed above.
-
