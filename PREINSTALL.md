@@ -12,13 +12,13 @@ added to your collection or an existing document is modified.
 # Additional setup
 
 Before you can use this extension, you will need to enable Perspective API.
-Follow [the instructions on our Get Started page](support.perspectiveapi.com/s/docs-get-started)
+Follow [the instructions on our Get Started page](https://support.perspectiveapi.com/s/docs-get-started)
 to request API access and then [enable the API and create an API
-key](support.perspectiveapi.com/s/docs-enable-the-api).
+key](https://support.perspectiveapi.com/s/docs-enable-the-api).
 
 By default, you're granted quota for 1 QPS to Perspective API. For additional
 QPS, fill out a [quota increase
-request](support.perspectiveapi.com/s/request-quota-increase) as needed. Note
+request](https://support.perspectiveapi.com/s/request-quota-increase) as needed. Note
 that if you add or update documents at a rate higher than your allotted QPS,
 you may exceed quota and the extension will fail to score your documents.
 
