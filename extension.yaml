@@ -18,7 +18,7 @@ specVersion: v1beta
 
 displayName: Analyze Comments
 description:
-  Detects abusive content in comment strings written to a Cloud Firestore collection (uses Perspective API).
+  Analyzes the toxicity level of comments written to a Cloud Firestore collection using Perspective API.
 
 license: Apache-2.0
 
@@ -29,17 +29,7 @@ author:
   authorName: Firebase
   url: https://firebase.google.com
 
-contributors:
-  - authorName: Adrian Nauth
-    email: nauth@google.com
-    url: https://github.com/nauthadr
-
 billingRequired: true
-
-# Commented out as accounts must be whitelisted to enable the api
-# apis:
-#   - apiName: commentanalyzer.googleapis.com
-#     reason: To detect abusive content in comment strings.
 
 roles:
   - role: datastore.user
@@ -124,7 +114,7 @@ params:
   - param: PERSPECTIVE_API_KEY
     label: Perspective API Key
     description: >
-      What is the API KEY that will be used to call the Perspective API?
+      What is the API KEY that will be used to call Perspective API?
     required: true
 
   - param: COLLECTION_PATH
@@ -141,14 +131,14 @@ params:
     label: Input field name
     description: >
       What is the name of the field that contains the string that you want to analyze?
-    example: input
-    default: input
+    example: text
+    default: text 
     required: true
 
   - param: OUTPUT_FIELD_NAME
-    label: Abusive content output field name
+    label: Output field name
     description: >
-      What is the name of the field where you want to store your output?
-    example: abusive_attribute_scores
-    default: abusive_attribute_scores
+      What is the name of the field where you want to store the output toxicity scores?
+    example: attribute_scores
+    default: attribute_scores
     required: true
