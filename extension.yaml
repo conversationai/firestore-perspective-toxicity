@@ -110,13 +110,26 @@ params:
   - param: PERSPECTIVE_API_KEY
     label: Perspective API Key
     description: >
-      What is the API KEY that will be used to call Perspective API?
+      What is the API key that will be used to call Perspective API?
+    required: true
+
+  - param: ATTRIBUTES
+    label: Attributes to receive scores for
+    description: >
+        The Perspective API predicts the perceived impact a comment may have on
+        a coversation by evaluating that comment across a range of emotional
+        concepts, called attributes. For help selecting which to receive scores
+        for, see the [list of available attributes](https://support.perspectiveapi.com/s/about-the-api-attributes-and-languages).
+    validationRegex: "^[A-Z,_]*[A-Z]$"
+    validationErrorMessage: Attributes must be in all-caps and comma-separated with no spaces
+    example: "TOXICITY,SEVERE_TOXICITY,INSULT"
+    default: "TOXICITY,SEVERE_TOXICITY,IDENTITY_ATTACK,INSULT,PROFANITY,THREAT"
     required: true
 
   - param: COLLECTION_PATH
     label: Collection path
     description: >
-      What is the path to the collection that contains the strings that you want to analyze?
+      What is the path to the collection that contains the comments you want to analyze?
     example: comments
     validationRegex: "^[^/]+(/[^/]+/[^/]+)*$"
     validationErrorMessage: Must be a valid Cloud Firestore Collection
@@ -126,7 +139,7 @@ params:
   - param: INPUT_FIELD_NAME
     label: Input field name
     description: >
-      What is the name of the field that contains the string that you want to analyze?
+      What is the name of the field that contains the comment you want to analyze?
     example: text
     default: text
     required: true
@@ -134,7 +147,7 @@ params:
   - param: OUTPUT_FIELD_NAME
     label: Output field name
     description: >
-      What is the name of the field where you want to store the output toxicity scores?
+      What is the name of the field where you want to store the output attribute scores?
     example: attribute_scores
     default: attribute_scores
     required: true

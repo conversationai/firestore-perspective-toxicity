@@ -18,6 +18,7 @@ export default {
     location: process.env.LOCATION || "us-central1",
     inputFieldName: process.env.INPUT_FIELD_NAME || "input",
     outputFieldName: process.env.OUTPUT_FIELD_NAME || "labeled_attributes",
+    attributes: process.env.ATTRIBUTES || "",
     apiKey: process.env.PERSPECTIVE_API_KEY || "",
     doNotStore: process.env.DO_NOT_STORE || "false"
   };

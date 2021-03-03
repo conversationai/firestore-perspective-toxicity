@@ -122,16 +122,10 @@ const extractInput = (snapshot: admin.firestore.DocumentSnapshot): any => {
 
 const analyzeComment = async (string: string): Promise<IAttributeScores> => {
   const client = new Client(config.apiKey);
+  var attributes = config.attributes.split(",");
   return await client.getScores(string, {
     doNotStore: config.doNotStore === "true",
-    attributes: [
-      "TOXICITY",
-      "SEVERE_TOXICITY",
-      "IDENTITY_ATTACK",
-      "INSULT",
-      "PROFANITY",
-      "THREAT",
-    ],
+    attributes: attributes,
   });
 };
 
