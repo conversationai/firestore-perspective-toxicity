@@ -2,12 +2,16 @@ Use this extension to get toxicity scores from [Perspective
 API](perspectiveapi.com) for comments
 written to a Cloud Firestore collection.
 
-This extension runs Perspective API on the string field you specify for each
-document in your collection. The API uses machine learning models to score the 
-perceived impact a comment might have on a conversation. This extension gives 
-your text scores for the following attributes: TOXICITY, SEVERE_TOXICITY,
-IDENTITY_ATTACK, INSULT, PROFANITY, and THREAT. It is run when a new document is
-added to your collection or an existing document is modified.
+This extension runs Perspective API on the text field and collection you
+configure. The API uses machine learning models to score the perceived impact a
+comment might have on a conversation by evaluating that comment across a range
+of emotional concepts, called attributes. When you install this extension, you
+will specify the attributes you want to receive scores for. Perspective's main
+attribute is TOXICITY, defined as "a rude, disrespectful, or unreasonable
+comment that is likely to make you leave a discussion". See a list of all
+available attributes [on our website](https://support.perspectiveapi.com/s/about-the-api-attributes-and-languages).
+Scores are retrieved when a new document is added to your collection or an
+existing document is modified.
 
 # Additional setup
 
