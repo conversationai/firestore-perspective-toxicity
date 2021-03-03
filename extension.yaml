@@ -12,19 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: firestore-analyze-comments
+name: firestore-perspectiveapi-analyzetoxicity
 version: 0.1.0
 specVersion: v1beta
 
-displayName: Analyze Comments
+displayName: Analyze Toxicity with Perspective API
 description:
-  Analyzes the toxicity level of comments written to a Cloud Firestore collection using Perspective API.
+  Analyze the perceived impact a comment might have on a conversation using Perspective API.
 
 license: Apache-2.0
-
-sourceUrl: https://github.com/firebase/extensions/tree/master/firestore-analyze-comments
-releaseNotesUrl: https://github.com/firebase/extensions/blob/master/firestore-analyze-comments/CHANGELOG.md
-
 author:
   authorName: Perspective API
   url: https://perspectiveapi.com
