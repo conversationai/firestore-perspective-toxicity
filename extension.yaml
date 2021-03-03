@@ -117,7 +117,7 @@ params:
     label: Attributes to receive scores for
     description: >
         The Perspective API predicts the perceived impact a comment may have on
-        a coversation by evaluating that comment across a range of emotional
+        a conversation by evaluating that comment across a range of emotional
         concepts, called attributes. For help selecting which to receive scores
         for, see the [list of available attributes](https://support.perspectiveapi.com/s/about-the-api-attributes-and-languages).
     validationRegex: "^[A-Z,_]*[A-Z]$"
