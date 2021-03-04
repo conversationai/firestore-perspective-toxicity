@@ -23,45 +23,36 @@ import {
 
 import config from "./config";
 
+const client = new Client(config.apiKey);
+const logger = functions.logger;
+
 // Initialize the Firebase Admin SDK
 admin.initializeApp();
 
 export const fsAnalyzeCommentsOnCreate = functions.handler.firestore.document.onCreate(
   async (change): Promise<void> => {
-    functions.logger.log(
-      "Started execution of fsAnalyzeCommentsCreate with configuration",
-      config
-    );
-    if (config.inputFieldName == config.outputFieldName) {
-      functions.logger.log(
-        "Input field name must not equal output field name."
-      );
+    if (config.inputFieldName === config.outputFieldName) {
+      logger.log("Input field name must not equal output field name.");
       return;
     }
     try {
       await handleCreateDocument(change);
     } catch (err) {
-      functions.logger.error(err);
+      logger.error(err);
     }
   }
 );
 
 export const fsAnalyzeCommentsOnUpdate = functions.handler.firestore.document.onUpdate(
   async (change): Promise<void> => {
-    functions.logger.log(
-      "Started execution of fsAnalyzeCommentsUpdate with configuration",
-      config
-    );
-    if (config.inputFieldName == config.outputFieldName) {
-      functions.logger.log(
-        "Input field name must not equal output field name."
-      );
+    if (config.inputFieldName === config.outputFieldName) {
+      logger.log("Input field name must not equal output field name.");
       return;
     }
     try {
       await handleUpdateDocument(change.before, change.after);
     } catch (err) {
-      functions.logger.error(err);
+      logger.error(err);
     }
   }
 );
@@ -70,14 +61,10 @@ const handleCreateDocument = async (
   snapshot: admin.firestore.DocumentSnapshot
 ): Promise<void> => {
   const input = extractInput(snapshot);
-  if (input) {
-    return updateDocumentOutputField(snapshot, await analyzeComment(input));
-  } else {
-    functions.logger.log(
-      "Document created without the specified input field: ",
-      config.inputFieldName
-    );
+  if (!input) {
+    return;
   }
+  return updateDocumentOutputField(snapshot, await analyzeComment(input));
 };
 
 const handleUpdateDocument = async (
@@ -87,19 +74,7 @@ const handleUpdateDocument = async (
   const inputBefore = extractInput(beforeDocSnapshot);
   const inputAfter = extractInput(afterDocSnapshot);
 
-  if (!inputAfter && !inputBefore) {
-    functions.logger.log(
-      "Document does not contain the specified input field: ",
-      config.inputFieldName
-    );
-    return;
-  }
-
-  if (inputBefore === inputAfter) {
-    functions.logger.log(
-      "Input field %s value unchanged. Will not call perspective API.",
-      config.inputFieldName
-    );
+  if ((!inputAfter && !inputBefore) || inputBefore === inputAfter) {
     return;
   }
 
@@ -109,6 +84,7 @@ const handleUpdateDocument = async (
       await analyzeComment(inputAfter)
     );
   } else if (inputBefore) {
+    // Input field was deleted. Delete the remaining output field.
     await updateDocumentOutputField(
       afterDocSnapshot,
       admin.firestore.FieldValue.delete()
@@ -121,20 +97,31 @@ const extractInput = (snapshot: admin.firestore.DocumentSnapshot): any => {
 };
 
 const analyzeComment = async (string: string): Promise<IAttributeScores> => {
-  const client = new Client(config.apiKey);
-  return await client.getScores(string, {
-    doNotStore: config.doNotStore === "true",
-    attributes: config.attributes.split(","),
-  });
+  logger.log(
+    `Analyzing field '${config.inputFieldName}' for ${config.attributes}`
+  );
+  try {
+    return await client.getScores(string, {
+      doNotStore: config.doNotStore === "true",
+      attributes: config.attributes.split(","),
+    });
+  } catch (e) {
+    // Something failed with the request. We raise a generic error message
+    // because the perspectiveapi-js-client does not surface the API error text.
+    return Promise.reject(
+      "Error with the Perspective API. Please ensure your configuration and " +
+        "request are valid and you have sufficient quota."
+    );
+  }
 };
 
 const updateDocumentOutputField = async (
   snapshot: admin.firestore.DocumentSnapshot,
-  analyzeResponse: any
+  value: IAttributeScores | FirebaseFirestore.FieldValue
 ): Promise<void> => {
   // Wrapping in transaction to allow for automatic retries (#48)
   await admin.firestore().runTransaction((transaction) => {
-    transaction.update(snapshot.ref, config.outputFieldName, analyzeResponse);
+    transaction.update(snapshot.ref, config.outputFieldName, value);
     return Promise.resolve();
   });
 };
