@@ -35,7 +35,7 @@ resources:
   - name: fsAnalyzeCommentsOnCreate
     type: firebaseextensions.v1beta.function
     description:
-      Listens for writes of new strings to your specified Cloud Firestore collection, analyzes the strings,
+      Listens for new comments in your specified Cloud Firestore collection, runs toxicity analysis,
       then writes the results back to the same document.
     properties:
       location: ${param:LOCATION}
@@ -46,7 +46,7 @@ resources:
   - name: fsAnalyzeCommentsOnUpdate
     type: firebaseextensions.v1beta.function
     description:
-      Listens for writes of new strings to your specified Cloud Firestore collection, analyzes the strings,
+      Listens for updates to comments in your specified Cloud Firestore collection, runs toxicity analysis,
       then writes the results back to the same document.
     properties:
       location: ${param:LOCATION}

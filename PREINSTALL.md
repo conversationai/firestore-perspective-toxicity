@@ -1,5 +1,5 @@
 Use this extension to get toxicity scores from [Perspective
-API](perspectiveapi.com) for comments
+API](https://perspectiveapi.com) for comments
 written to a Cloud Firestore collection.
 
 This extension runs Perspective API on the text field and collection you
