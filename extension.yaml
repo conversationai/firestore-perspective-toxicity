@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: firestore-perspectiveapi-analyzetoxicity
+name: firestore-perspective-toxicity
 version: 0.1.0
 specVersion: v1beta
 
