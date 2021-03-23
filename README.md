@@ -1,8 +1,8 @@
 # Analyze Toxicity with Perspective API
 
-**Author**: Perspective API (**[https://perspectiveapi.com](https://perspectiveapi.com)**)
+**Author**: Jigsaw (**[https://jigsaw.google.com](https://jigsaw.google.com)**)
 
-**Description**: Analyze the perceived impact a comment might have on a conversation using Perspective API.
+**Description**: Analyze the perceived impact a comment might have on a conversation using [Perspective API](https://perspectiveapi.com).
 
 ---
 
