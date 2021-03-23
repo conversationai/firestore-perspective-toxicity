@@ -1,7 +1,5 @@
 ### See it in action
 
-Before you proceed, make sure you have followed the instructions on our [Get Started page](https://support.perspectiveapi.com/s/docs-get-started) to request API access, [enabled the API](https://support.perspectiveapi.com/s/docs-enable-the-api), and created an API key.
-
 To test out the extension:
 
 1.  Go to your [Cloud Firestore dashboard](https://console.firebase.google.com/project/${param:PROJECT_ID}/firestore/data) in the Firebase console.

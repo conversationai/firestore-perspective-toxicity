@@ -8,8 +8,8 @@ comment might have on a conversation by evaluating that comment across a range
 of emotional concepts, called attributes. When you install this extension, you
 will specify the attributes you want to receive scores for. Perspective's main
 attribute is TOXICITY, defined as "a rude, disrespectful, or unreasonable
-comment that is likely to make you leave a discussion". See a list of all
-available attributes [on our website](https://support.perspectiveapi.com/s/about-the-api-attributes-and-languages).
+comment that is likely to make you leave a discussion". See a [list of all
+available attributes](https://support.perspectiveapi.com/s/about-the-api-attributes-and-languages) on our developer site.
 Scores are retrieved when a new document is added to your collection or an
 existing document is modified.
 
@@ -20,8 +20,8 @@ Follow [the instructions on our Get Started page](https://support.perspectiveapi
 to request API access and then [enable the API and create an API
 key](https://support.perspectiveapi.com/s/docs-enable-the-api).
 
-By default, you're granted quota for 1 QPS to Perspective API. For additional
-QPS, fill out a [quota increase
+By default, you're granted quota for 1 query per second (QPS) to Perspective
+API. For additional QPS, fill out a [quota increase
 request](https://support.perspectiveapi.com/s/request-quota-increase) as needed.
 
 **Note:** If you add or update documents at a rate higher than your allotted QPS,
@@ -29,8 +29,9 @@ you may exceed quota and the extension will fail to score your documents.
 
 #### Billing
 
-This extension uses other Firebase or Google Cloud services which may have
-associated charges:
+Perspective API is **free** for all amounts of quota. However, the extension
+uses Firebase and Google Cloud Platform services which may have associated
+charges, including:
 
 - Cloud Firestore
 - Cloud Functions
@@ -41,6 +42,3 @@ extension uses a service that requires a paid-tier plan, for example calling to
 a Google Cloud API or making outbound network requests to non-Google services.
 All Firebase services offer a free tier of usage.
 [Learn more about Firebase billing.](https://firebase.google.com/pricing)
-
-Perspective API is free for all amounts of quota. Any costs associated with this
-extension come from the Firebase and Google Cloud Platform services listed above.
