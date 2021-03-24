@@ -23,20 +23,20 @@ of emotional concepts, called attributes. When you install this extension, you
 will specify the attributes you want to receive scores for. Perspective's main
 attribute is TOXICITY, defined as "a rude, disrespectful, or unreasonable
 comment that is likely to make you leave a discussion". See a list of all
-available attributes [on our website](https://support.perspectiveapi.com/s/about-the-api-attributes-and-languages).
+available attributes [on our website](https://developers.perspectiveapi.com/s/about-the-api-attributes-and-languages).
 Scores are retrieved when a new document is added to your collection or an
 existing document is modified.
 
 #### Additional setup
 
 Before you can use this extension, you will need to enable Perspective API.
-Follow [the instructions on our Get Started page](https://support.perspectiveapi.com/s/docs-get-started)
+Follow [the instructions on our Get Started page](https://developers.perspectiveapi.com/s/docs-get-started)
 to request API access and then [enable the API and create an API
-key](https://support.perspectiveapi.com/s/docs-enable-the-api).
+key](https://developers.perspectiveapi.com/s/docs-enable-the-api).
 
 By default, you're granted quota for 1 QPS to Perspective API. For additional
 QPS, fill out a [quota increase
-request](https://support.perspectiveapi.com/s/request-quota-increase) as needed.
+request](https://developers.perspectiveapi.com/s/request-quota-increase) as needed.
 
 **Note:** If you add or update documents at a rate higher than your allotted QPS,
 you may exceed quota and the extension will fail to score your documents.
@@ -64,7 +64,7 @@ extension come from the Firebase and Google Cloud Platform services listed above
 
 - Perspective API Key: What is the API key that will be used to call Perspective API?
 
-- Attributes to receive scores for: The Perspective API predicts the perceived impact a comment may have on a conversation by evaluating that comment across a range of emotional concepts, called attributes. For help selecting which to receive scores for, see the [list of available attributes](https://support.perspectiveapi.com/s/about-the-api-attributes-and-languages).
+- Attributes to receive scores for: The Perspective API predicts the perceived impact a comment may have on a conversation by evaluating that comment across a range of emotional concepts, called attributes. For help selecting which to receive scores for, see the [list of available attributes](https://developers.perspectiveapi.com/s/about-the-api-attributes-and-languages).
 
 - Collection path: What is the path to the collection that contains the comments you want to analyze?
 
