@@ -10,6 +10,18 @@
 
 > ⚠️ **Experimental**: This extension is available for testing as an _experimental_ release. It has not been as thoroughly tested as the officially released extensions, and future updates might introduce breaking changes. If you use this extension, please [report bugs and make feature requests](https://github.com/conversationai/firestore-perspective-toxicity/issues/new/choose) in our GitHub repository.
 
+### Console
+
+[![Install this extension in your Firebase project](https://github.com/FirebaseExtended/experimental-extensions/blob/2b5bf71a15cec64c33d9a1b15f45f6a435e8f4de/install-extension.png "Install this extension in your Firebase project")](https://console.firebase.google.com/u/0/project/_/extensions/install?ref=jigsaw/firestore-perspective-toxicity)
+
+### Firebase CLI
+
+```bash
+firebase ext:install jigsaw/firestore-perspective-toxicity --project=<your-project-id>
+```
+
+> Learn more about installing extensions in the Firebase Extensions documentation: [console](https://firebase.google.com/docs/extensions/install-extensions?platform=console), [CLI](https://firebase.google.com/docs/extensions/install-extensions?platform=cli)
+
 ---
 
 **Details**: Use this extension to get toxicity scores from [Perspective
