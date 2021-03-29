@@ -12,7 +12,7 @@
 
 ### Console
 
-[![Install this extension in your Firebase project](https://github.com/FirebaseExtended/experimental-extensions/blob/2b5bf71a15cec64c33d9a1b15f45f6a435e8f4de/install-extension.png "Install this extension in your Firebase project")](https://console.firebase.google.com/u/0/project/_/extensions/install?ref=jigsaw/firestore-perspective-toxicity)
+[![Install this extension in your Firebase project](https://github.com/FirebaseExtended/experimental-extensions/blob/2b5bf71a15cec64c33d9a1b15f45f6a435e8f4de/install-extension.png "Install this extension in your Firebase project")](https://console.firebase.google.com/project/_/extensions/install?ref=jigsaw/firestore-perspective-toxicity)
 
 ### Firebase CLI
 
