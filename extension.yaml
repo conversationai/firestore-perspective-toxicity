@@ -18,12 +18,12 @@ specVersion: v1beta
 
 displayName: Analyze Toxicity with Perspective API
 description:
-  Analyze the perceived impact a comment might have on a conversation using Perspective API.
+    Analyze the perceived impact a comment might have on a conversation using [Perspective API](https://perspectiveapi.com).
 
 license: Apache-2.0
 author:
-  authorName: Perspective API
-  url: https://perspectiveapi.com
+  authorName: Jigsaw
+  url: https://jigsaw.google.com
 
 billingRequired: true
 
