@@ -39,7 +39,7 @@ available attributes](https://developers.perspectiveapi.com/s/about-the-api-attr
 Scores are retrieved when a new document is added to your collection or an
 existing document is modified.
 
-#### Additional setup
+## Additional setup
 
 Before you can use this extension, you will need to enable Perspective API.
 Follow [the instructions on our Get Started page](https://developers.perspectiveapi.com/s/docs-get-started)
@@ -53,7 +53,7 @@ request](https://developers.perspectiveapi.com/s/request-quota-increase) as need
 **Note:** If you add or update documents at a rate higher than your allotted QPS,
 you may exceed quota and the extension will fail to score your documents.
 
-#### Billing
+## Billing
 
 Perspective API is **free** for all amounts of quota. However, the extension
 uses Firebase and Google Cloud Platform services which may have associated
