@@ -6,9 +6,7 @@
 
 ---
 
-## 🧩 Install this experimental extension
-
-> ⚠️ **Experimental**: This extension is available for testing as an _experimental_ release. It has not been as thoroughly tested as the officially released extensions, and future updates might introduce breaking changes. If you use this extension, please [report bugs and make feature requests](https://github.com/conversationai/firestore-perspective-toxicity/issues/new/choose) in our GitHub repository.
+## 🧩 Install this extension
 
 ### Console
 

@@ -13,7 +13,7 @@
 # limitations under the License.
 
 name: firestore-perspective-toxicity
-version: 0.1.2
+version: 0.1.5
 specVersion: v1beta
 
 displayName: Analyze Toxicity with Perspective API
@@ -23,6 +23,8 @@ license: Apache-2.0
 author:
   authorName: Jigsaw
   url: https://jigsaw.google.com
+
+sourceUrl: https://github.com/conversationai/firestore-perspective-toxicity/tree/main
 
 billingRequired: true
 
