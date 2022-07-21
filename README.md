@@ -1,4 +1,4 @@
-# Analyze Toxicity with Perspective API
+# Analyze Comment Toxicity with Perspective API
 
 **Author**: Jigsaw (**[https://jigsaw.google.com](https://jigsaw.google.com)**)
 
