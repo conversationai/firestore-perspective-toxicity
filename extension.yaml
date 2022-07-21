@@ -16,8 +16,8 @@ name: firestore-perspective-toxicity
 version: 0.1.5
 specVersion: v1beta
 
-displayName: Analyze Toxicity with Perspective API
-description: Analyze the perceived impact a comment might have on a conversation using Perspective API.
+displayName: Analyze Comment Toxicity with Perspective API
+description: Analyze the perceived impact a text or comment might have on a conversation using Perspective API.
 
 license: Apache-2.0
 author:
