@@ -111,7 +111,8 @@ params:
   - param: PERSPECTIVE_API_KEY
     label: Perspective API Key
     description: >
-      What is the API key that will be used to call Perspective API?
+      What is the API key that will be used to call Perspective API? (You can request one 
+      [here](https://docs.google.com/forms/d/e/1FAIpQLSdhBBnVVVbXSElby-jhNnEj-Zwpt5toQSCFsJerGfpXW66CuQ/viewform)
     required: true
 
   - param: ATTRIBUTES
